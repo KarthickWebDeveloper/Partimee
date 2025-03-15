@@ -1,0 +1,8 @@
+jsconfig.js file
+{
+"compilerOptions": {
+"baseUrl": "src"
+},
+"include": ["src"]
+}
+-> to avoid ./src in imports

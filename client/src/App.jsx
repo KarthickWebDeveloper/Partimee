@@ -11,7 +11,7 @@ import "./App.css";
 import Loader from "./components/Loader";
 import Job from "./pages/Job";
 import { Provider } from "react-redux";
-import store from "./redux/Store";
+import store from "./redux/store.js";
 import NotFound from "./components/NotFound";
 
 const App = () => {

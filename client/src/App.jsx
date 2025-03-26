@@ -11,7 +11,7 @@ import "./App.css";
 import Loader from "./components/Loader";
 import Job from "./pages/Job";
 import { Provider } from "react-redux";
-import Store from "./redux/Store";
+import store from "./redux/Store";
 import NotFound from "./components/NotFound";
 
 const App = () => {
@@ -19,7 +19,7 @@ const App = () => {
     <BrowserRouter
       future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
     >
-      <Provider store={Store}>
+      <Provider store={store}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route element={<ProtectedRoutes />}>

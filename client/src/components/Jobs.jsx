@@ -1,14 +1,27 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiTimeFive } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { jDetails } from "../constants/jDetails";
 import ClipLoader from "react-spinners/ClipLoader";
 import { useSelector } from "react-redux";
+import { backend_url } from "../config/config.js";
+
 
 const Jobs = ({ filters }) => {
   const searchQuery = useSelector((state) => state.search.searchQuery);
+  const [details, setDetails] = useState([]);
+  useEffect(() => {
+    const jobDetails = async () => {
+      await fetch(`${backend_url}/api/jobs/`,{
+        method:"GET"}
+      ).then(res => res.json()).then(data => setDetails(data)).catch(err => console.log(err))
 
+      console.log(details);
+    }   
+    jobDetails()
+    
+  }, []);
 
   const [sortBy, setSortBy] = useState("");
   const [loading, setLoading] = useState(true);

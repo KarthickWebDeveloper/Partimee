@@ -6,3 +6,9 @@ jsconfig.js file
 "include": ["src"]
 }
 -> to avoid ./src in imports
+
+
+Idea
+1. Post any home service or health care service.
+2. Part time vacancy for students (shop, Wedding catering services, paani puri shop, waffel shop, Any kind of job)
+3. People can list their availability like people page and they are displayed in the webpage.

@@ -13,14 +13,14 @@ const Navbar = () => {
 
   const { isLoggedIn, userType } = useSelector((state) => state.auth);
 
-  useEffect(() => {
-    console.log(
-      "Navbar Re-rendered. isLoggedIn:",
-      isLoggedIn,
-      "userType:",
-      userType
-    );
-  }, [isLoggedIn, userType]);
+  // useEffect(() => {
+  //   console.log(
+  //     "Navbar Re-rendered. isLoggedIn:",
+  //     isLoggedIn,
+  //     "userType:",
+  //     userType
+  //   );
+  // }, [isLoggedIn, userType]);
 
   const [isSignIn, setIsSignIn] = useState(true);
 

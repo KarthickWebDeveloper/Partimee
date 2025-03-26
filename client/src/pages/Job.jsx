@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { jDetails } from "../constants/jDetails";
 import google from "../assets/google.png";
+import { backend_url } from "../config/config.js";
+
 
 const Job = () => {
   const { id } = useParams();
